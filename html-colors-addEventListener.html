@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Cambios de color</title>
+     <style>
+       #color{
+        background-color: #aabbcc;
+        height: 40px; 
+        width: 468px;
+        margin-top: 20px;
+       }
+     </style>
+   </head>
+   <body>
+    <h3>Ejercicio de visualización de colores usando addEventListener</h3>
+     <form>
+       Escriba el código del color: <input type="text" id="colorCode" value="#cc0000" />
+     </form>
+     <div id="color"></div>
+
+     <script type="text/javascript" charset="utf-8">
+       form = document.getElementById('colorCode');
+       color = document.getElementById('color');
+       
+       handler = function() {
+          color.style.backgroundColor = form.value;
+       }
+       form.addEventListener('input', handler);
+     </script>
+   </body>
+</html>
